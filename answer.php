@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Random Motivational Quotes, with PHP (API)</title>
+  <title>Motivational Bible Phrases, with PHP (API)</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Random Motivational Quotes, with PHP (API)</span>
+        <span class="mdl-layout-title">Motivational Bible Phrases, with PHP (API)</span>
       </div>
     </header>
     <main class="mdl-layout__content">
