@@ -36,7 +36,7 @@
         </button>
       </form>
       <div class="page-content-answer">
-        <div id="extinct-animal-facts"></div>
+        <div id="motivational-quote"></div>
       </div>
     </main>
   </div>

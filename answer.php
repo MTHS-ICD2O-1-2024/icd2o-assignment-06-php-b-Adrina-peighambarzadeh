@@ -41,17 +41,9 @@
 
             echo '<b>Quote:</b> "' . $quotePrase . '"<br />';
             echo '<b>Author:</b> ' . $quoteAuthor . '<br />';
-            echo '<p>You will be redirected back in 5 seconds...</p>';
-          } else {
-            echo '<p style="color: red;">No quotes available in the API.</p>';
-          }
-        } else {
-          echo '<p style="color: red;">Error fetching data. Please try again later.</p>';
         }
         ?>
       </div>
-
-      <div class="page-content-return" style="padding: 16px;">
         <a href="./index.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
           Return to Home Now
         </a>
