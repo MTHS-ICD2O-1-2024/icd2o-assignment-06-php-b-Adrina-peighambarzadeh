@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Random Motivational Quotes, with JS (API)" />
+  <meta name="description" content="Random Motivational Quotes, with PHP (API)" />
   <meta name="keywords" content="mths, icd2o" />
-  <meta name="author" content="Adrina peighambarzadeh" />
+  <meta name="author" content="Adrina Peighambarzadeh" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -35,23 +35,25 @@
         if ($dataFromApi !== false) {
           $jsonData = json_decode($dataFromApi, true);
 
-          // pick a random quote from the array
-          $randomIndex = array_rand($jsonData);
-          $randomQuote = $jsonData[$randomIndex];
+          if (is_array($jsonData) && count($jsonData) > 0) {
+            $randomIndex = array_rand($jsonData);
+            $randomQuote = $jsonData[$randomIndex];
 
-          $quoteText = $randomQuote['text'];
-          $quoteAuthor = $randomQuote['author'];
+            $quoteText = $randomQuote['text'];
+            $quoteAuthor = $randomQuote['author'];
 
-          // output using original style, no htmlspecialchars
-          echo '<b>Quote:</b> "' . $quoteText . '"<br />';
-          echo '<b>Author:</b> ' . $quoteAuthor . '<br />';
+            echo '<b>Quote:</b> "' . $quoteText . '"<br />';
+            echo '<b>Author:</b> ' . $quoteAuthor . '<br />';
+          } else {
+            echo '<p style="color: red;">No quotes available in the API.</p>';
+          }
         } else {
-          echo 'Error fetching data.';
+          echo '<p style="color: red;">Error fetching data. Please try again later.</p>';
         }
         ?>
       </div>
       <div class="page-content-return">
-        <a href="./index.php">Return ...</a>
+        <a href="./index.html">Return ...</a>
       </div>
     </main>
   </div>
