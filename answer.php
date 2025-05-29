@@ -7,13 +7,10 @@
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Adrina Peighambarzadeh" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="5;url=index.html" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-deep_orange.min.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
   <title>Motivational Bible Phrases, with PHP (API)</title>
 </head>
 
@@ -27,7 +24,7 @@
     </header>
     <main class="mdl-layout__content">
       <br />
-      <div class="page-content-answer">
+      <div class="page-content-answer" style="padding: 16px;">
         <?php
         $apiUrl = 'https://gomezmig03.github.io/MotivationalAPI/en.json';
         $dataFromApi = file_get_contents($apiUrl);
@@ -39,11 +36,12 @@
             $randomIndex = array_rand($jsonData);
             $randomQuote = $jsonData[$randomIndex];
 
-            $quoteText = $randomQuote['text'];
+            $quotePrase = $randomQuote['phrase'];
             $quoteAuthor = $randomQuote['author'];
 
-            echo '<b>Quote:</b> "' . $quoteText . '"<br />';
+            echo '<b>Quote:</b> "' . $quotePrase . '"<br />';
             echo '<b>Author:</b> ' . $quoteAuthor . '<br />';
+            echo '<p>You will be redirected back in 5 seconds...</p>';
           } else {
             echo '<p style="color: red;">No quotes available in the API.</p>';
           }
@@ -52,8 +50,11 @@
         }
         ?>
       </div>
-      <div class="page-content-return">
-        <a href="./index.html">Return ...</a>
+
+      <div class="page-content-return" style="padding: 16px;">
+        <a href="./index.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Return to Home Now
+        </a>
       </div>
     </main>
   </div>
