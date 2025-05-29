@@ -27,7 +27,7 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img id="random-image" src="./images/download(2).jpg" alt="Motivation image" width="95%" height="auto">
+        <img id="random-image" src="./images/download (2).jpg" alt="Motivation image" width="95%" height="auto">
       </div>
       <br />
       <form action="answer.php" method="get">

@@ -42,6 +42,7 @@
             echo '<b>Quote:</b> "' . $quotePrase . '"<br />';
             echo '<b>Author:</b> ' . $quoteAuthor . '<br />';
         }
+      }
         ?>
       </div>
         <a href="./index.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
